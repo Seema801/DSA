@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int linearSearch(int arr[], int size, int key, int index = 0) {
+    if (index >= size) return -1;
+    if (arr[index] == key) return index;
+    return linearSearch(arr, size, key, index + 1);
+}
+
+int main() {
+    int arr[] = {2, 4, 6, 8, 10};
+    int key = 8;
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int result = linearSearch(arr, size, key);
+    cout << (result != -1 ? "Element found at index " + to_string(result) : "Element not found") << endl;
+    return 0;
+}
