@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+class Search {
+public:
+    int linearSearch(int arr[], int size, int key) {
+        for (int i = 0; i < size; i++) {
+            if (arr[i] == key)
+                return i;
+        }
+        return -1;
+    }
+};
+
+int main() {
+    Search obj;
+    int arr[] = {7, 14, 21, 28, 35};
+    int key = 21;
+    int size = sizeof(arr) / sizeof(arr[0]);
+
+    int result = obj.linearSearch(arr, size, key);
+    cout << (result != -1 ? "Element found at index " + to_string(result) : "Element not found") << endl;
+    return 0;
+}
