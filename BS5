@@ -1,0 +1,10 @@
+import java.util.Arrays;
+
+public class BinarySearchString {
+    public static void main(String[] args) {
+        String[] arr = {"apple", "banana", "cherry", "mango", "peach"};
+        Arrays.sort(arr);
+        int index = Arrays.binarySearch(arr, "cherry");
+        System.out.println("Element found at index: " + index);
+    }
+}
